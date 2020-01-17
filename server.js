@@ -19,7 +19,7 @@ const app = express();
 const port = 3000;
 
 // Set the Access Token
-const accessToken = 'REPLACE_WITH_ACCESS_TOKEN';
+const accessToken = 'EAAAENO8nHIbccNhALKQOv0D-iY951GmFCpNyxPnHFpXnfeS6vMPaXKifZp5R-3O';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -60,7 +60,7 @@ app.post('/process-payment', async (req, res) => {
       'title': 'Payment Successful',
       'result': response
     });
-  } catch(error) {
+  } catch (error) {
     res.status(500).json({
       'title': 'Payment Failure',
       'result': error.response.text
